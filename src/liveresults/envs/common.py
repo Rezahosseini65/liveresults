@@ -27,7 +27,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 LOCAL_APPS = [
-
+    'liveresults.auths.users.apps.UsersConfig',
 ]
 
 THIRD_PARTY_APPS = [
@@ -121,6 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'users.CustomUser'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
