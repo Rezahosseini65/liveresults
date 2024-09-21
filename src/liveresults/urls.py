@@ -3,6 +3,17 @@ from django.urls import path, include
 
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 
+
+front_urlpatterns = [
+    path('api/front/league/', include(('liveresults.apps.leagues.urls.front', 'liveresults.apps.leagues'),
+                                      namespace='front-league')),
+]
+
+admin_urlpatterns = [
+    path('api/admin/league/', include(('liveresults.apps.leagues.urls.admin', 'liveresults.apps.leagues'),
+                                      namespace='admin-league')),
+]
+
 doc_urlpatterns = [
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
@@ -12,4 +23,4 @@ doc_urlpatterns = [
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('__debug__/', include("debug_toolbar.urls")),
-]+doc_urlpatterns
+]+doc_urlpatterns+front_urlpatterns+admin_urlpatterns
