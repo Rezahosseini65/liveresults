@@ -29,4 +29,3 @@ class LeagueModelTest(TestCase):
 
     def test_str_method(self):
         self.assertEqual(str(self.league.name), 'Premier League')
-        
