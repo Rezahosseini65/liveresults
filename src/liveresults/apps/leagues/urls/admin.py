@@ -1,8 +1,8 @@
 from django.urls import path
 
-from liveresults.apps.leagues.views.admin import LeagueAdminView
+from liveresults.apps.leagues.views.admin import LeagueAdminListView, LeagueAdminDetailView
 
 urlpatterns = [
-    path('', LeagueAdminView.as_view(), name='league-admin'),
-    path('<int:pk>/', LeagueAdminView.as_view(), name='league-detail'),
+    path('', LeagueAdminListView.as_view(), name='league-admin'),
+    path('<int:pk>/', LeagueAdminDetailView.as_view(), name='league-detail'),
 ]
