@@ -29,6 +29,8 @@ ALLOWED_HOSTS = []
 LOCAL_APPS = [
     'liveresults.auths.users.apps.UsersConfig',
     'liveresults.apps.leagues.apps.LeaugesConfig',
+    'liveresults.apps.matchs.apps.MatchsConfig',
+    'liveresults.apps.teams.apps.TeamsConfig',
 ]
 
 THIRD_PARTY_APPS = [
