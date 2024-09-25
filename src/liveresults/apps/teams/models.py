@@ -15,6 +15,7 @@ class Team(models.Model):
     city = models.CharField(max_length=128)
     stadium = models.CharField(max_length=128, blank=True)
     established_date = models.DateField(blank=True)
+    website = models.URLField(blank=True)
 
     class Meta:
         ordering = ['name']
