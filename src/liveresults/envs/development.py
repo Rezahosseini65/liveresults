@@ -28,5 +28,8 @@ DATABASES = {
         'PASSWORD': '123@456',
         'HOST': 'db',
         'PORT': '5432',
+        'TEST': {
+            'NAME': 'test_liveresults',
+        },
     }
 }
