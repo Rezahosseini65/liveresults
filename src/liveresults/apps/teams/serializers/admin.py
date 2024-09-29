@@ -36,7 +36,7 @@ class TeamAdminCreateSerializer(serializers.ModelSerializer):
 
 
 class TeamAdminRetrieveSerializer(serializers.ModelSerializer):
-    league = serializers.CharField(source='league.name')
+    league = serializers.CharField(source='league.name', read_only=True)
 
     class Meta:
         model = Team

@@ -4,5 +4,5 @@ from liveresults.apps.teams.views.admin import TeamAdminCreateView, TeamAdminRet
 
 urlpatterns = [
     path('create/', TeamAdminCreateView.as_view(), name='create-team'),
-    path('retrieve/<str:name>/', TeamAdminRetrieveView.as_view(), name='retrieveView'),
+    path('<str:name>/', TeamAdminRetrieveView.as_view(), name='detail-team'),
 ]
