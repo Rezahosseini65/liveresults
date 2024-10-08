@@ -22,11 +22,11 @@ class TeamAdminRetrieveView(generics.RetrieveUpdateDestroyAPIView):
 class HonorAdminCreateView(generics.CreateAPIView):
     queryset = Honor.objects.all().select_related('team')
     serializer_class = HonorAdminCreateSerializer
-    #permission_classes = [IsAdminUser]
+    permission_classes = [IsAdminUser]
 
 
 class HonorAdminRetrieveUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Honor.objects.all().select_related('team')
     serializer_class = HonorAdminRetrieveUpdateDeleteSerializer
-    #permission_classes = [IsAdminUser]
+    permission_classes = [IsAdminUser]
 
